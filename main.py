@@ -56,7 +56,7 @@ class BrowserSelection(ft.UserControl):
                 alignment=ft.MainAxisAlignment.CENTER,
                 controls=[
                     ft.Radio(value="Google Chrome", label="Google Chrome", disabled=not is_app("Google Chrome")),
-                    ft.Radio(value="Firefox", label="Firefox", disabled=not is_app("python"))
+                    ft.Radio(value="Firefox", label="Firefox", disabled=not is_app("Firefox"))
                     ]),
                 on_change=self.browser_change
             )
