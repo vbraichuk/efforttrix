@@ -98,7 +98,7 @@ def main(page: ft.Page):
     
     confirm_dialog = ft.AlertDialog(
         modal=True,
-        title=ft.Text("LoE File Picker1"),
+        title=ft.Text("LoE File Picker"),
         content=ft.Text("Do you really want to exit this app?"),
         actions=[
             ft.OutlinedButton("Yes", on_click=yes_click),
