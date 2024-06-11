@@ -1,8 +1,8 @@
 version: 1.0.{build}
 
 image:
-- Visual Studio 2022
-#- macOS
+№- Visual Studio 2022
+- macOS
 #- Ubuntu
 
 skip_branch_with_pr: true
@@ -19,10 +19,10 @@ before_build:
 #- cmd:  |
 # C:\Python312\python.exe -m pip install --upgrade pip
 # C:\Python312\python.exe -m pip install --upgrade pip
-- sh: >-
-    pip install --upgrade pip
-
-    pip install pyinstaller
+#- sh: >-
+#    pip install --upgrade pip
+#
+#    pip install pyinstaller
 - ps: |
     C:\Python312\python.exe -m pip install --upgrade pip
     C:\Python312\python.exe -m pip install pyinstaller
