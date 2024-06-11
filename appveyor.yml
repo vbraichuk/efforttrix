@@ -1,7 +1,7 @@
 image:
 - Visual Studio 2019
-- macOS
-- Ubuntu
+#- macOS
+#- Ubuntu
 
 skip_branch_with_pr: true
 stack: python 3.10
@@ -14,18 +14,19 @@ install:
 - pip install -r requirements.txt
 
 before_build:
-- cmd:  |
-    C:\Python312\python.exe -m pip install --upgrade pip
-    C:\Python312\python.exe -m pip install pyinstaller
-- pwsh:
-    pip install --upgrade pip
-    pip install pyinstaller
+#- cmd:  |
+#    C:\Python312\python.exe -m pip install --upgrade pip
+#    C:\Python312\python.exe -m pip install pyinstaller
+#- pwsh:
+#    pip install --upgrade pip
+#    pip install pyinstaller
 - ps: |
     C:\Python312\python.exe -m pip install --upgrade pip
     C:\Python312\python.exe -m pip install pyinstaller
 
 build_script:
-- flet pack main.py --name counter --icon icon.png --product-name counter --product-version "1.0.0" --copyright "Copyright (c) 2022 YourCompany Inc."
+#- flet pack main.py --name efforttrix --icon icon.png --product-name efforttrix --product-version "1.0.0" --copyright "Copyright (c) 2022 YourCompany Inc."
+- flet pack main.py --name efforttrix --product-name efforttrix --product-version "0.1" --copyright "Copyright (c) 2024 CLXS BDM Team."
 
 test: off
 
