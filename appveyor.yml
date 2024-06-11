@@ -35,7 +35,7 @@ deploy:
   provider: GitHub
   auth_token: $(GITHUB_TOKEN)
   on:
-    APPVEYOR_REPO_TAG: true
+    appveyor_repo_tag: true
 
 #
 #   Windows package
@@ -47,10 +47,10 @@ for:
     - image: Visual Studio 2019
 
   after_build:
-  - 7z a counter-windows.zip %CD%\dist\*.exe
+  - 7z a efforttrix-windows.zip %CD%\dist\*.exe
 
   artifacts:
-  - path: counter-windows.zip
+  - path: efforttrix-windows.zip
 
 #
 #   macOS package
@@ -61,10 +61,10 @@ for:
     - image: macOS
 
   after_build:
-  - tar -czvf counter-macos.tar.gz -C dist counter.app
+  - tar -czvf efforttrix-macos.tar.gz -C dist efforttrix.app
 
   artifacts:
-  - path: counter-macos.tar.gz
+  - path: efforttrix-macos.tar.gz
 
 #
 #   Linux package
@@ -75,7 +75,7 @@ for:
     - image: Ubuntu
 
   after_build:
-  - tar -czvf counter-linux.tar.gz -C dist counter
+  - tar -czvf efforttrix-linux.tar.gz -C dist efforttrix
 
   artifacts:
-  - path: counter-linux.tar.gz
+  - path: efforttrix-linux.tar.gz
