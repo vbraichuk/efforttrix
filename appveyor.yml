@@ -20,7 +20,7 @@ before_build:
 #- pwsh:
 #    pip install --upgrade pip
 #    pip install pyinstaller
-- ps: |
+- ps:
 	C:\Python312\python.exe -m pip install pyinstaller
 	C:\Python312\python.exe -m pip install --upgrade pip
 
