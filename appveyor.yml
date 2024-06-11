@@ -1,3 +1,5 @@
+version: 1.0.{build}
+
 image:
 - Visual Studio 2022
 #- macOS
@@ -17,9 +19,10 @@ before_build:
 #- cmd:  |
 # C:\Python312\python.exe -m pip install --upgrade pip
 # C:\Python312\python.exe -m pip install --upgrade pip
-#- pwsh:
-#    pip install --upgrade pip
-#    pip install pyinstaller
+- sh: >-
+    pip install --upgrade pip
+
+    pip install pyinstaller
 - ps: |
     C:\Python312\python.exe -m pip install --upgrade pip
     C:\Python312\python.exe -m pip install pyinstaller
@@ -35,12 +38,13 @@ deploy:
   release: myproduct-v$(APPVEYOR_BUILD_VERSION)
   description: 'Release description'
   tag: $(APPVEYOR_REPO_TAG_NAME)
-  provider: GitHub
+- provider: GitHub
   auth_token: $(GITHUB_TOKEN)
   draft: true
   prerelease: true
   force_update: true
   on:
+    branch: main
     APPVEYOR_REPO_TAG: true
 
 #
