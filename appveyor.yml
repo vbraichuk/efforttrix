@@ -21,8 +21,8 @@ before_build:
 #    pip install --upgrade pip
 #    pip install pyinstaller
 - ps: |
-  C:\Python312\python.exe -m pip install pyinstaller
-  C:\Python312\python.exe -m pip install --upgrade pip
+    C:\Python312\python.exe -m pip install pyinstaller
+    C:\Python312\python.exe -m pip install --upgrade pip
 
 build_script:
 #- flet pack main.py --name efforttrix --icon icon.png --product-name efforttrix --product-version "1.0.0" --copyright "Copyright (c) 2022 YourCompany Inc."
