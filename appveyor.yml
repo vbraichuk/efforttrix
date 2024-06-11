@@ -19,9 +19,7 @@ before_build:
 #- cmd:  |
 # C:\Python312\python.exe -m pip install --upgrade pip
 # C:\Python312\python.exe -m pip install --upgrade pip
-- sh: pip install pyinstaller
-#    pip install --upgrade pip
-#
+- sh: pip install --upgrade pip
 #- ps: |
 #    C:\Python312\python.exe -m pip install --upgrade pip
 #    C:\Python312\python.exe -m pip install pyinstaller
