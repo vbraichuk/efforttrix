@@ -34,10 +34,12 @@ test: off
 deploy:
   release: myproduct-v$(APPVEYOR_BUILD_VERSION)
   description: 'Release description'
+  tag: $(APPVEYOR_REPO_TAG_NAME)
   provider: GitHub
   auth_token: $(GITHUB_TOKEN)
   draft: true
   prerelease: true
+  force_update: true
   on:
     APPVEYOR_REPO_TAG: true
 
