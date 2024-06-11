@@ -5,7 +5,6 @@ image:
 
 skip_branch_with_pr: true
 stack: python 3.12
-appveyor_repo_tag: true
 
 environment:
   GITHUB_TOKEN:
@@ -36,7 +35,8 @@ deploy:
   provider: GitHub
   auth_token: $(GITHUB_TOKEN)
   on:
-    appveyor_repo_tag: true
+    branch: main
+    APPVEYOR_REPO_TAG: true
 
 #
 #   Windows package
