@@ -12,8 +12,8 @@ environment:
 
 install:
 - pip install -r requirements.txt
-- py -m pip install pyinstaller
 - py -m pip install --upgrade pip
+- py -m pip install pyinstaller
 
 before_build:
 #- cmd:  |
