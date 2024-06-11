@@ -35,17 +35,17 @@ test: off
 
 # Publish artifacts to GitHub Releases on "tag" builds
 deploy:
-  release: myproduct-v$(APPVEYOR_BUILD_VERSION)
+  release: efforttrix-v$(APPVEYOR_BUILD_VERSION)
   description: 'Release description'
   tag: $(APPVEYOR_REPO_TAG_NAME)
 - provider: GitHub
-  auth_token: $(GITHUB_TOKEN)
-  draft: true
-  prerelease: true
-  force_update: true
-  on:
-    branch: main
-    APPVEYOR_REPO_TAG: true
+    auth_token: $(GITHUB_TOKEN)
+    draft: true
+    prerelease: true
+    force_update: true
+    on:
+      branch: main
+      APPVEYOR_REPO_TAG: true
 
 #
 #   Windows package
