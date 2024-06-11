@@ -12,6 +12,8 @@ environment:
 
 install:
 - pip install -r requirements.txt
+- py -m pip install pyinstaller
+- py -m pip install --upgrade pip
 
 before_build:
 #- cmd:  |
@@ -20,9 +22,9 @@ before_build:
 #- pwsh:
 #    pip install --upgrade pip
 #    pip install pyinstaller
-- ps: |
-  C:\Python312\python.exe -m pip install pyinstaller
-  C:\Python312\python.exe -m pip install --upgrade pip
+#- ps: |
+#  C:\Python312\python.exe -m pip install pyinstaller
+#  C:\Python312\python.exe -m pip install --upgrade pip
 
 build_script:
 #- flet pack main.py --name efforttrix --icon icon.png --product-name efforttrix --product-version "1.0.0" --copyright "Copyright (c) 2022 YourCompany Inc."
