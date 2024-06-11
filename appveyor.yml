@@ -13,8 +13,13 @@ environment:
 install:
 - pip install -r requirements.txt
 
+before_build:
+- cmd: pip install --upgrade pip
+- pwsh: python -m pip install --upgrade pip
+- ps: python -m pip install --upgrade pip
+
 build_script:
-- flet pack main.py --name counter --icon icon.png --product-name counter --product-version "1.2.3" --copyright "Copyright (c) 2022 YourCompany Inc."
+- flet pack main.py --name counter --icon icon.png --product-name counter --product-version "1.0.0" --copyright "Copyright (c) 2022 YourCompany Inc."
 
 test: off
 
