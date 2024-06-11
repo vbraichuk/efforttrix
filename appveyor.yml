@@ -5,6 +5,7 @@ image:
 
 skip_branch_with_pr: true
 stack: python 3.12
+appveyor_repo_tag: true
 
 environment:
   GITHUB_TOKEN:
