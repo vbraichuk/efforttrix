@@ -14,9 +14,12 @@ install:
 - pip install -r requirements.txt
 
 before_build:
-- cmd: pip install --upgrade pip
-- pwsh: python -m pip install --upgrade pip
-- ps: python -m pip install --upgrade pip
+- cmd:  |
+    pip install --upgrade pip
+    pip install pyinstaller
+- pwsh: |
+    C:\Python312\python.exe -m pip install --upgrade pip
+    C:\Python312\python.exe -m pip install pyinstaller
 
 build_script:
 - flet pack main.py --name counter --icon icon.png --product-name counter --product-version "1.0.0" --copyright "Copyright (c) 2022 YourCompany Inc."
