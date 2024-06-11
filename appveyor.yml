@@ -37,6 +37,7 @@ test: off
 deploy:
   provider: GitHub
   auth_token: $(GITHUB_TOKEN)
+  artifact: /.*\.zip/
   on:
     branch: main
     APPVEYOR_REPO_TAG: true
