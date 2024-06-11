@@ -4,7 +4,7 @@ image:
 #- Ubuntu
 
 skip_branch_with_pr: true
-stack: python 3.10
+stack: python 3.12
 
 environment:
   GITHUB_TOKEN:
@@ -16,13 +16,11 @@ install:
 before_build:
 #- cmd:  |
 #    C:\Python312\python.exe -m pip install --upgrade pip
-#    C:\Python312\python.exe -m pip install pyinstaller
+#	C:\Python312\python.exe -m pip install pyinstaller
 #- pwsh:
 #    pip install --upgrade pip
 #    pip install pyinstaller
-- ps: |
-    C:\Python312\python.exe -m pip install --upgrade pip
-    C:\Python312\python.exe -m pip install pyinstaller
+- ps: C:\Python312\python.exe -m pip install pyinstaller
 
 build_script:
 #- flet pack main.py --name efforttrix --icon icon.png --product-name efforttrix --product-version "1.0.0" --copyright "Copyright (c) 2022 YourCompany Inc."
