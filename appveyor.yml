@@ -33,7 +33,9 @@ test: off
 # Publish artifacts to GitHub Releases on "tag" builds
 deploy:
   provider: GitHub
+  tag: $(APPVEYOR_REPO_TAG_NAME)
   auth_token: $(GITHUB_TOKEN)
+  force_update: true
   artifact: /.*\.zip/
   on:
     branch: main
