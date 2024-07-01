@@ -32,8 +32,8 @@ test: off
 
 # Publish artifacts to GitHub Releases on "tag" builds
 deploy:
+  release: efforttrix-v$(APPVEYOR_BUILD_VERSION)
   provider: GitHub
-  tag: $(APPVEYOR_REPO_TAG_NAME)
   auth_token: $(GITHUB_TOKEN)
   force_update: true
   artifact: /.*\.zip/
