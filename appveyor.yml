@@ -10,7 +10,7 @@ stack: python 3.12
 
 environment:
   GITHUB_TOKEN:
-    secure: BBpVQhKwPvOdELLahF5Z9pOJbZPaW5DU1TE14qf9QOtZYZEMl+NV5IKfiNgYCvWh
+    secure: MURYiE9A/7lT1QhuhqHJn7yMT4uBB8FkESA0x/anojoz73LWEuIC/IMu8twMD5+6
 
 install:
 - pip install -r requirements.txt
